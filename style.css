@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #87CEEB 70%, #32CD32 0%);
+    position: relative;
+}
+
+
+#player {
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    width: 50px;
+}
+
+/* Hat container */
+.hat {
+    position: relative;
+    width: 50px;
+    height: 35px;
+}
+
+/* Hat top (rounded rectangle) */
+.hat-top {
+    width: 35px;
+    height: 25px;
+    background: #222;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    left: 7px;
+}
+
+/* Hat brim (oval) */
+.hat-brim {
+    width: 50px;
+    height: 8px;
+    background: #111;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Head */
+.head {
+    width: 50px;
+    height: 50px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    top: -5px; /* slightly overlap with hat brim */
+}
+
+/* Monocle */
+.monocle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid gold;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+/* Body */
+.body {
+    width: 20px;
+    height: 30px;
+    background: black;
+    position: relative;
+    top: -5px;
+    left: 15px;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+#game {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #87CEEB 70%, #32CD32 0%);
+    position: relative;
+}
+
+
+/* House obstacle */
+.obstacle.house {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+}
+
+/* House roof */
+.obstacle.house::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 15px solid green;
+    top: -15px;
+    left: 0;
+}
+
+/* House body */
+.obstacle.house::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: green;
+    top: 0;
+    left: 0;
+}
+
+/* Hotel obstacle */
+.obstacle.hotel {
+    width: 30px;
+    height: 60px;
+    background: red;
+    position: absolute;
+    bottom: 50px;
+    border-top: 5px solid darkred;
+    border-radius: 2px;
+}
+
+
+#money {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: gold;
+    font-weight: bold;
+}
